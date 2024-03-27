@@ -13,7 +13,7 @@
     "author": "Nisarg Bhalavat",
     "license": "ISC",
     "dependencies": {
-        "express": "^4.17.3",
+        "express": "^4.19.2",
         "mongodb": "^4.17.0",
         "mongoose": "^6.11.3",
         "path": "^0.12.7"
