@@ -36,6 +36,9 @@ To run this application on your location system, the following installations are
 
 ## How to use
 
+Run `npm test` for BMI calculation and HTTP route tests. The tests do not require
+a running MongoDB instance.
+
 -   Clone the repository
 -   Add your MongoDB localhost path in **.env.example** and rename it to **.env**
 -   Run `npm run setup-app`

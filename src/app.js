@@ -15,6 +15,10 @@ const port = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use((req, res, next) => {
+    if (req.body === undefined) req.body = {};
+    next();
+});
 
 const client = new MongoClient(setupDB.url);
 
@@ -131,35 +135,35 @@ app.post('/patients', async (req, res) => {
     }
 });
 
-app.get('*', (req, res) => {
+app.get('/{*path}', (req, res) => {
     res.status(404).send({
         status: 404,
         message: 'Resource Not Found',
     });
 });
 
-app.post('*', (req, res) => {
+app.post('/{*path}', (req, res) => {
     res.status(404).send({
         status: 404,
         message: 'Resource Not Found',
     });
 });
 
-app.patch('*', (req, res) => {
+app.patch('/{*path}', (req, res) => {
     res.status(405).send({
         status: 405,
         message: 'Method not allowed!',
     });
 });
 
-app.put('*', (req, res) => {
+app.put('/{*path}', (req, res) => {
     res.status(405).send({
         status: 405,
         message: 'Method not allowed!',
     });
 });
 
-app.delete('*', (req, res) => {
+app.delete('/{*path}', (req, res) => {
     res.status(405).send({
         status: 405,
         message: 'Method not allowed!',
