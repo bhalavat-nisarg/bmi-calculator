@@ -30,7 +30,7 @@ This application can be used as a standalone data processor from the Database or
 
 To run this application on your location system, the following installations are needed:
 
-1. Node.Js
+1. Node.js 18 or newer (CI tests Node.js 22 and 24)
 2. NPM Module
 3. MongoDB
 
