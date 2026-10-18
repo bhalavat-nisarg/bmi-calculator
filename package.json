@@ -12,8 +12,11 @@
     },
     "author": "Nisarg Bhalavat",
     "license": "ISC",
+    "engines": {
+        "node": ">=18"
+    },
     "dependencies": {
-        "express": "^4.22.2",
+        "express": "^5.2.1",
         "mongodb": "^4.17.0",
         "mongoose": "^8.24.1",
         "path": "^0.12.7"
